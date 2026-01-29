@@ -5,7 +5,7 @@
 A warm, minimal theme for [Obsidian](https://obsidian.md) inspired by the workshop aesthetic — where ideas take shape.
 
 ![Werkstatt Theme Preview](screenshot.png)
-
+![Werkstatt Theme Light](light.png)
 ## Features
 
 - 🌗 **Dark & Light modes** — Both carefully crafted
@@ -51,14 +51,6 @@ A warm, minimal theme for [Obsidian](https://obsidian.md) inspired by the worksh
 3. Place both files in the folder
 4. Restart Obsidian
 5. Settings → Appearance → Theme → Select "Werkstatt"
-
-## Screenshots
-
-### Dark Mode
-![Dark Mode](screenshot.png)
-
-### Light Mode
-![Light Mode](light.png)
 
 ## Customization
 
