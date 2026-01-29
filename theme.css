@@ -1,0 +1,544 @@
+/* 
+ * Werkstatt - Obsidian Theme
+ * Köztes tér. Mozgásban.
+ * 
+ * by brtkcs
+ * https://brtkcs.com
+ */
+
+/*═══════════════════════════════════════════════════════════════════════════
+  FONTS - Uses Obsidian default, customize in Settings → Appearance
+═══════════════════════════════════════════════════════════════════════════*/
+
+/*═══════════════════════════════════════════════════════════════════════════
+  DARK THEME
+═══════════════════════════════════════════════════════════════════════════*/
+.theme-dark {
+  color-scheme: dark;
+
+  /* Accent - Olajzöld */
+  --accent-h: 64;
+  --accent-s: 72%;
+  --accent-l: 55%;
+
+  /* Werkstatt színpaletta */
+  --color-olive: #a8c830;
+  --color-olive-dark: #848B23;
+  --color-rust: #c75d4d;
+  --color-purple: #8b7ec8;
+  --color-beige: #D7D4CD;
+  --color-yellow: #d4a656;
+  --color-cyan: #6ab0a3;
+
+  /* Háttér színek */
+  --bg_dark2_x: 8, 8, 8;
+  --bg_dark2: rgb(var(--bg_dark2_x));
+  --bg_dark_x: 14, 14, 14;
+  --bg_dark: rgb(var(--bg_dark_x));
+  --bg_x: 20, 20, 18;
+  --bg: rgb(var(--bg_x));
+  --bg_highlight_x: 35, 35, 30;
+  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_dark_x: 28, 28, 24;
+  --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
+  --terminal_black_x: 50, 48, 40;
+  --terminal_black: rgb(var(--terminal_black_x));
+
+  /* Szöveg színek */
+  --fg_x: 235, 232, 225;
+  --fg: rgb(var(--fg_x));
+  --fg_dark_x: 200, 195, 180;
+  --fg_dark: rgb(var(--fg_dark_x));
+  --comment_x: 100, 96, 80;
+  --comment: rgb(var(--comment_x));
+
+  /* Accent színek */
+  --olive_x: 168, 200, 48;
+  --olive: rgb(var(--olive_x));
+  --rust_x: 199, 93, 77;
+  --rust: rgb(var(--rust_x));
+  --purple_x: 139, 126, 200;
+  --purple: rgb(var(--purple_x));
+  --beige_x: 215, 212, 205;
+  --beige: rgb(var(--beige_x));
+  --yellow_x: 212, 166, 86;
+  --yellow: rgb(var(--yellow_x));
+  --cyan_x: 106, 176, 163;
+  --cyan: rgb(var(--cyan_x));
+  --green_x: 132, 139, 35;
+  --green: rgb(var(--green_x));
+  --red_x: 168, 54, 27;
+  --red: rgb(var(--red_x));
+
+  --unknown: #ffffff;
+}
+
+.theme-dark,
+.theme-light {
+  /* Color mappings */
+  --color_red_rgb: var(--rust_x);
+  --color-red: var(--rust);
+  --color_purple_rgb: var(--purple_x);
+  --color-purple: var(--purple);
+  --color_green_rgb: var(--olive_x);
+  --color-green: var(--olive);
+  --color_cyan_rgb: var(--cyan_x);
+  --color-cyan: var(--cyan);
+  --color_blue_rgb: var(--purple_x);
+  --color-blue: var(--purple);
+  --color_yellow_rgb: var(--yellow_x);
+  --color-yellow: var(--yellow);
+  --color_orange_rgb: var(--rust_x);
+  --color-orange: var(--rust);
+  --color_pink_rgb: var(--rust_x);
+  --color-pink: var(--rust);
+
+  /* Background */
+  --background-primary: var(--bg);
+  --background-primary-alt: var(--bg);
+  --background-secondary: var(--bg_dark);
+  --background-secondary-alt: var(--bg_dark);
+
+  --background-modifier-border: var(--bg_highlight);
+  --background-modifier-border-focus: var(--olive);
+  --background-modifier-border-hover: var(--bg_highlight);
+  --background-modifier-form-field: var(--bg_dark);
+  --background-modifier-form-field-highlighted: var(--bg_dark);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.4);
+  --background-modifier-success: var(--olive);
+  --background-modifier-error: var(--rust);
+  --background-modifier-error-hover: var(--rust);
+  --background-modifier-cover: rgba(var(--bg_dark_x), 0.85);
+  --background-modifier-hover: var(--bg_highlight);
+  --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
+  --background-modifier-active-hover: var(--bg_highlight);
+
+  /* Text */
+  --text-normal: var(--fg);
+  --text-faint: var(--comment);
+  --text-muted: var(--fg_dark);
+  --text-error: var(--rust);
+  --text-accent: var(--olive);
+  --text-accent-hover: var(--color-olive);
+  --text-error-hover: var(--rust);
+  --text-selection: var(--unknown);
+  --text-on-accent: var(--bg);
+  --text-highlight-bg: rgba(var(--yellow_x), 0.25);
+  --text-selection: rgba(var(--olive_x), 0.3);
+  --bold-color: var(--beige);
+  --italic-color: var(--cyan);
+
+  /* Interactive */
+  --interactive-normal: var(--bg_dark);
+  --interactive-hover: var(--bg);
+  --interactive-success: var(--olive);
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --interactive-accent-hover: var(--color-olive);
+
+  /* Scrollbar */
+  --scrollbar-bg: var(--bg_dark2);
+  --scrollbar-thumb-bg: var(--comment);
+  --scrollbar-active-thumb-bg: var(--olive);
+  --scrollbar-width: 8px;
+
+  /* Headings - Werkstatt szekció színek */
+  --h1-color: var(--olive);
+  --h2-color: var(--rust);
+  --h3-color: var(--purple);
+  --h4-color: var(--cyan);
+  --h5-color: var(--yellow);
+  --h6-color: var(--beige);
+
+  --border-width: 2px;
+
+  /* Tags */
+  --tag-color: var(--olive);
+  --tag-background: rgba(var(--olive_x), 0.15);
+  --tag-color-hover: var(--color-olive);
+  --tag-background-hover: rgba(var(--olive_x), 0.25);
+
+  /* Links */
+  --link-color: var(--olive);
+  --link-color-hover: var(--color-olive);
+  --link-external-color: var(--cyan);
+  --link-external-color-hover: var(--cyan);
+  --link-unresolved-color: var(--rust);
+
+  /* Checkbox */
+  --checkbox-radius: 4px;
+  --checkbox-color: var(--olive);
+  --checkbox-color-hover: var(--color-olive);
+  --checkbox-marker-color: var(--bg);
+  --checkbox-border-color: var(--comment);
+  --checkbox-border-color-hover: var(--olive);
+
+  /* Table */
+  --table-header-background: var(--bg_dark2);
+  --table-header-background-hover: var(--bg_highlight);
+  --table-border-color: var(--bg_highlight);
+
+  /* Code */
+  --code-normal: var(--fg);
+  --code-background: var(--bg_highlight_dark);
+
+  /* Blockquote */
+  --blockquote-background-color: var(--bg_dark);
+  --blockquote-border-color: var(--olive);
+
+  /* Callouts */
+  --callout-default: var(--olive_x);
+  --callout-info: var(--cyan_x);
+  --callout-summary: var(--beige_x);
+  --callout-tip: var(--olive_x);
+  --callout-todo: var(--olive_x);
+  --callout-bug: var(--rust_x);
+  --callout-error: var(--rust_x);
+  --callout-fail: var(--rust_x);
+  --callout-example: var(--purple_x);
+  --callout-important: var(--yellow_x);
+  --callout-success: var(--olive_x);
+  --callout-question: var(--yellow_x);
+  --callout-warning: var(--rust_x);
+  --callout-quote: var(--beige_x);
+
+  /* Icons */
+  --icon-color: var(--fg_dark);
+  --icon-color-hover: var(--olive);
+  --icon-color-focused: var(--olive);
+  --icon-color-active: var(--olive);
+
+  /* Navigation */
+  --nav-item-color: var(--fg_dark);
+  --nav-item-color-hover: var(--fg);
+  --nav-item-background-hover: var(--bg_highlight);
+  --nav-item-color-active: var(--olive);
+  --nav-item-background-active: var(--bg_highlight);
+  --nav-file-tag: rgba(var(--olive_x), 0.8);
+  --nav-indentation-guide-color: var(--bg_highlight);
+
+  /* Indentation */
+  --indentation-guide-color: var(--comment);
+  --indentation-guide-color-active: var(--olive);
+
+  /* Graph */
+  --graph-line: var(--comment);
+  --graph-node: var(--fg);
+  --graph-node-tag: var(--rust);
+  --graph-node-attachment: var(--purple);
+  --graph-node-focused: var(--olive);
+
+  /* Tabs */
+  --tab-text-color-focused-active: rgba(var(--olive_x), 0.8);
+  --tab-text-color-focused-active-current: var(--olive);
+  --tab-background-active: var(--bg);
+
+  /* Modal */
+  --modal-border-color: var(--bg_highlight);
+  --prompt-border-color: var(--bg_highlight);
+
+  /* Slider */
+  --slider-track-background: var(--bg_highlight);
+  --slider-thumb-border-color: var(--olive);
+
+  /* Embed */
+  --embed-background: var(--bg_dark);
+  --embed-border-left: 3px solid var(--olive);
+  --embed-padding: 1.5rem 1.5rem 0.5rem;
+
+  /* Canvas */
+  --canvas-color: var(--bg_highlight_x);
+
+  /* Toggle */
+  --toggle-thumb-color: var(--bg);
+
+  /* Radius */
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+
+  /* Image */
+  --image-radius: 6px;
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  LIGHT THEME
+═══════════════════════════════════════════════════════════════════════════*/
+.theme-light {
+  color-scheme: light;
+
+  /* Accent - Olajzöld */
+  --accent-h: 64;
+  --accent-s: 60%;
+  --accent-l: 34%;
+
+  /* Háttér színek */
+  --bg_dark2_x: 200, 197, 190;
+  --bg_dark2: rgb(var(--bg_dark2_x));
+  --bg_dark_x: 215, 212, 205;
+  --bg_dark: rgb(var(--bg_dark_x));
+  --bg_x: 255, 255, 255;
+  --bg: rgb(var(--bg_x));
+  --bg_highlight_x: 235, 232, 225;
+  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_dark_x: 225, 222, 215;
+  --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
+  --terminal_black_x: 25, 18, 2;
+  --terminal_black: rgb(var(--terminal_black_x));
+
+  /* Szöveg színek */
+  --fg_x: 25, 18, 2;
+  --fg: rgb(var(--fg_x));
+  --fg_dark_x: 67, 60, 34;
+  --fg_dark: rgb(var(--fg_dark_x));
+  --comment_x: 140, 135, 120;
+  --comment: rgb(var(--comment_x));
+
+  /* Accent színek - sötétebb a light mode-hoz */
+  --olive_x: 132, 139, 35;
+  --olive: rgb(var(--olive_x));
+  --rust_x: 168, 54, 27;
+  --rust: rgb(var(--rust_x));
+  --purple_x: 49, 24, 90;
+  --purple: rgb(var(--purple_x));
+  --beige_x: 100, 96, 80;
+  --beige: rgb(var(--beige_x));
+  --yellow_x: 160, 120, 40;
+  --yellow: rgb(var(--yellow_x));
+  --cyan_x: 50, 120, 110;
+  --cyan: rgb(var(--cyan_x));
+  --green_x: 110, 117, 32;
+  --green: rgb(var(--green_x));
+  --red_x: 168, 54, 27;
+  --red: rgb(var(--red_x));
+
+  --unknown: #000000;
+
+  /* Override dark mode specifics */
+  --color-olive: #848B23;
+  --text-highlight-bg: rgba(var(--yellow_x), 0.3);
+  --text-selection: rgba(var(--olive_x), 0.25);
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  TYPOGRAPHY
+═══════════════════════════════════════════════════════════════════════════*/
+
+body {
+  --font-text-size: 16px;
+  --line-height-normal: 1.7;
+}
+
+/* Headings */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+
+/* H1 special - nagy, olajzöld */
+.markdown-rendered h1,
+.cm-header-1 {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--h1-color);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Blockquote - Werkstatt stílus */
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--olive);
+  background: var(--background-secondary);
+  padding: 1em 1.5em;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  font-style: italic;
+}
+
+/* Code blocks */
+.markdown-rendered pre {
+  border-left: 3px solid var(--olive);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+}
+
+/* Inline code */
+.markdown-rendered code {
+  background: rgba(var(--olive_x), 0.15);
+  padding: 2px 6px;
+  border-radius: var(--radius-s);
+}
+
+/* Links */
+.markdown-rendered a {
+  text-decoration: none;
+}
+
+.markdown-rendered a:hover {
+  text-decoration: underline;
+}
+
+/* Bold and Italic */
+strong, .cm-strong {
+  color: var(--bold-color);
+}
+
+em, .cm-em {
+  color: var(--italic-color);
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  UI ELEMENTS
+═══════════════════════════════════════════════════════════════════════════*/
+
+/* Sidebar */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder-title,
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title {
+  border-radius: var(--radius-s);
+}
+
+/* Active file highlight */
+.nav-file-title.is-active {
+  background: var(--bg_highlight);
+  border-left: 3px solid var(--olive);
+}
+
+/* Buttons */
+.mod-cta {
+  background: var(--olive) !important;
+  color: var(--bg) !important;
+  border-radius: var(--radius-m) !important;
+}
+
+.mod-cta:hover {
+  background: var(--color-olive) !important;
+}
+
+/* Input focus */
+input:focus,
+.cm-focused {
+  border-color: var(--olive) !important;
+  box-shadow: 0 0 0 3px rgba(var(--olive_x), 0.2) !important;
+}
+
+/* Tags in editor */
+.cm-hashtag {
+  color: var(--olive);
+  background: rgba(var(--olive_x), 0.1);
+  padding: 2px 4px;
+  border-radius: var(--radius-s);
+}
+
+/* Checkbox styling */
+.task-list-item-checkbox:checked {
+  background-color: var(--olive);
+  border-color: var(--olive);
+}
+
+/* Graph view */
+.graph-view.color-fill-tag {
+  color: var(--rust);
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--purple);
+}
+
+/* Status bar */
+.status-bar {
+  background: var(--bg_dark);
+  border-top: 1px solid var(--bg_highlight);
+}
+
+/* Ribbon */
+.workspace-ribbon {
+  background: var(--bg_dark);
+  border-right: 1px solid var(--bg_highlight);
+}
+
+/* Tab header */
+.workspace-tab-header.is-active {
+  background: var(--bg);
+  border-bottom: 2px solid var(--olive);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: var(--radius-m);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--olive);
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  CALLOUTS - Werkstatt styled
+═══════════════════════════════════════════════════════════════════════════*/
+
+.callout {
+  border-radius: var(--radius-m);
+  border-left-width: 3px;
+}
+
+.callout-title {
+  font-family: var(--font-monospace);
+  font-weight: 600;
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  SPECIAL: Werkstatt branding
+═══════════════════════════════════════════════════════════════════════════*/
+
+/* Vault title styling */
+.workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root > .nav-folder-title {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Empty state */
+.empty-state-title {
+  color: var(--olive);
+}
+
+/* Tooltips */
+.tooltip {
+  background: var(--bg_dark);
+  border: 1px solid var(--bg_highlight);
+  border-radius: var(--radius-m);
+}
+
+/*═══════════════════════════════════════════════════════════════════════════
+  PRINT STYLES
+═══════════════════════════════════════════════════════════════════════════*/
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .markdown-rendered h1 {
+    border-bottom-color: #848B23 !important;
+  }
+  
+  .markdown-rendered blockquote {
+    border-left-color: #848B23 !important;
+  }
+}
