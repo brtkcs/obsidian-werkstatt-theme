@@ -55,10 +55,10 @@ A warm, minimal theme for [Obsidian](https://obsidian.md) inspired by the worksh
 ## Screenshots
 
 ### Dark Mode
-![Dark Mode](screenshots/dark.png)
+![Dark Mode](screenshot.png)
 
 ### Light Mode
-![Light Mode](screenshots/light.png)
+![Light Mode](light.png)
 
 ## Customization
 
